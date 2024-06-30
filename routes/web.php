@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\ShopController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,8 @@ use App\Http\Controllers\ContactFormController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('shops', [ ShopController::class, 'index']);
 
 // Route::resource('contacts', ContactFormController::class);
 Route::prefix('contacts')->middleware(['auth'])
